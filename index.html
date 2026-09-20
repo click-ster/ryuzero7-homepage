@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ryuzero 7 のホームページ</title>
+<meta name="description" content="言語学や語学、人工言語を勉強・作成している中学生 Ryuzero 7 のホームページ。サーカッド語について。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+  <header class="hero">
+    <div class="avatar"><img src="images/icon.webp" alt="Ryuzero 7 のアイコン" width="320" height="320"></div>
+    <h1>Ryuzero 7</h1>
+    <p class="lead">言語学や語学、人工言語を勉強・作成している中学生です。</p>
+  </header>
+
+  <section id="sercad">
+    <h2>作品:サーカッド語</h2>
+    <p>サーカッド語は、Ryuzero 7 が作っている人工言語です。単語は辞書サイトで調べられます。</p>
+    <div class="actions"><a class="btn" href="https://zpdic.ziphil.com/dictionary/ziCzergeh" target="_blank" rel="noopener">サーカッド語辞書を見る</a><a class="btn ghost" href="#textbook">入門書を読む</a></div>
+  </section>
+
+  <section id="textbook">
+    <h2>入門書『ゼロから始めるサーカッド語入門』 <span class="wip">暫定版</span></h2>
+    <p>現在公開しているのは暫定版です。今後、内容が変わったり、追加されたりすることがあります。</p>
+    <p>サーカッド語の初学者向けの入門書です。文字と発音から始まり、会話文・文法の説明・例文・練習問題で学べます。スマホでは「拡大して読む」を押すと文字が大きくなります。</p>
+    <button class="btn" id="open-book" type="button" aria-expanded="false" aria-controls="reader">入門書を開く</button>
+    <div class="reader" id="reader" hidden tabindex="0" aria-label="入門書ビューア(左右の矢印キーでページ移動)">
+      <div class="ctrl">
+        <button class="btn ghost" id="prev" type="button">前のページ</button>
+        <span class="pos"><span id="cur">1</span> / <span id="tot">55</span></span>
+        <button class="btn ghost" id="next" type="button">次のページ</button>
+      </div>
+      <input type="range" id="slider" min="1" max="55" value="1" aria-label="ページを選ぶ">
+      <div class="stage" id="stage"><img id="page" alt="入門書 1ページ目" width="1075" height="1521"></div>
+      <p class="missing" id="book-missing" hidden>入門書の画像が見つかりません。index.html と同じ場所に book フォルダ(p01.webp〜p55.webp)を置いてください。</p>
+      <div class="zoombar"><button class="btn ghost" id="zoom" type="button" aria-pressed="false">拡大して読む</button></div>
+    </div>
+  </section>
+
+  <section id="news">
+    <h2>お知らせ</h2>
+    <ul class="news">
+      <li><time datetime="2026-09-20">2026.09.20</time><span>入門書『ゼロから始めるサーカッド語入門』(暫定版)を公開しました。</span></li>
+      <li><time datetime="2026-09-20">2026.09.20</time><span>ホームページを公開しました。サーカッド語の更新情報は、ここに追加していきます。</span></li>
+    </ul>
+  </section>
+
+  <section id="join" class="join">
+    <h2>サーカッド語を、いっしょに作って学びませんか</h2>
+    <p>LINEオープンチャット「サーカッド語を作る・学ぶ」で参加者を募集しています。サーカッド語に興味がある人は、気軽に入ってください。</p>
+    <a class="btn warm" href="https://line.me/ti/g2/lFfoF0Gfow1Xgv93GyeIkZLZW9tqupc2ZDeekA?utm_source=invitation&amp;utm_medium=link_copy&amp;utm_campaign=default" target="_blank" rel="noopener">オープンチャットに参加する</a>
+  </section>
+
+  <section id="likes">
+    <h2>好きなこと</h2>
+    <ul class="tags"><li>言語学</li><li>語学</li><li>人工言語</li></ul>
+  </section>
+
+  <section id="links">
+    <h2>リンク</h2>
+    <ul class="links">
+      <li><a href="https://x.com/Olatysy1113" target="_blank" rel="noopener"><b>X(旧Twitter)</b><span>@Olatysy1113</span></a></li>
+      <li><a href="https://note.com/rosy_allium1153" target="_blank" rel="noopener"><b>note</b><span>rosy_allium1153</span></a></li>
+      <li><a href="https://zpdic.ziphil.com/dictionary/ziCzergeh" target="_blank" rel="noopener"><b>サーカッド語辞書</b><span>辞書サイト</span></a></li>
+      <li><a href="https://line.me/ti/g2/lFfoF0Gfow1Xgv93GyeIkZLZW9tqupc2ZDeekA?utm_source=invitation&amp;utm_medium=link_copy&amp;utm_campaign=default" target="_blank" rel="noopener"><b>LINEオープンチャット</b><span>サーカッド語を作る・学ぶ</span></a></li>
+    </ul>
+  </section>
+
+  <footer>© 2026 Ryuzero 7</footer>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>

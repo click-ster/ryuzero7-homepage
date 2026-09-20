@@ -13,7 +13,7 @@
 <body>
 <main>
   <header class="hero">
-    <div class="avatar"><img src="images/icon.webp"width="320" height="320"></div>
+    <div class="avatar"><img src="images/icon.webp" alt="Ryuzero 7 のアイコン" width="320" height="320"></div>
     <h1>Ryuzero 7</h1>
     <p class="lead">言語学や語学、人工言語を勉強・作成している中学生です。</p>
   </header>
@@ -28,16 +28,15 @@
     <h2>入門書『ゼロから始めるサーカッド語入門』 <span class="wip">暫定版</span></h2>
     <p>現在公開しているのは暫定版です。今後、内容が変わったり、追加されたりすることがあります。</p>
     <p>サーカッド語の初学者向けの入門書です。文字と発音から始まり、会話文・文法の説明・例文・練習問題で学べます。スマホでは「拡大して読む」を押すと文字が大きくなります。</p>
-    <button class="btn" id="open-book" type="button" aria-expanded="false" aria-controls="reader">入門書を開く</button>
-    <div class="reader" id="reader" hidden tabindex="0" aria-label="入門書ビューア(左右の矢印キーでページ移動)">
+    <div class="reader" id="reader" tabindex="0" aria-label="入門書ビューア(左右の矢印キーでページ移動)">
       <div class="ctrl">
         <button class="btn ghost" id="prev" type="button">前のページ</button>
-        <span class="pos"><span id="cur">1</span> / <span id="tot">55</span></span>
+        <span class="pos"><span id="cur">1</span> / <span id="tot">54</span></span>
         <button class="btn ghost" id="next" type="button">次のページ</button>
       </div>
-      <input type="range" id="slider" min="1" max="55" value="1" aria-label="ページを選ぶ">
+      <input type="range" id="slider" min="1" max="54" value="1" aria-label="ページを選ぶ">
       <div class="stage" id="stage"><img id="page" alt="入門書 1ページ目" width="1075" height="1521"></div>
-      <p class="missing" id="book-missing" hidden>zerosa.pdf</p>
+      <p class="missing" id="book-missing" hidden>入門書の画像が見つかりません。index.html と同じ場所に book フォルダ(p01.webp〜p54.webp)を置いてください。</p>
       <div class="zoombar"><button class="btn ghost" id="zoom" type="button" aria-pressed="false">拡大して読む</button></div>
     </div>
   </section>
@@ -75,5 +74,6 @@
 </main>
 
 <script src="script.js"></script>
+
 </body>
 </html>
